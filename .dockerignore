@@ -1,6 +1,8 @@
+fd/
 venv/
-notebooks/
 .env
+data/football.db
+.git/
+.gitignore
+*.log
 __pycache__/
-*.pyc
-.git
