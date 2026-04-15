@@ -13,7 +13,8 @@ def get_db_path():
     return os.environ.get("DB_PATH", os.path.abspath(default_path))
 
 def generate_page_summary(page, context_data, context_label):
-    host = os.getenv("OLLAMA_HOST")
+    host = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
+    host = host.rstrip('/')
     url = f"{host}/api/generate"
     
     prompt = (
